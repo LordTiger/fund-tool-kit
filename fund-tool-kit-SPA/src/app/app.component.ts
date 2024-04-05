@@ -14,14 +14,12 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent implements OnInit {
 
-  private readonly supabase = inject(SupabaseService);
+  // private readonly supabase = inject(SupabaseService);
 
-  title = 'fund-tool-kit-SPA';
-
-  session = this.supabase.session;
+  // session = this.supabase.session;
 
   ngOnInit() {
-    this.supabase.authChanges((_, session) => (this.session = session!))
+    // this.supabase.authChanges((_, session) => (this.session = session!));
   }
 
 }
