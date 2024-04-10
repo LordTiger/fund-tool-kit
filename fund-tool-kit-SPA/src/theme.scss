@@ -1,0 +1,116 @@
+@use '@angular/material' as mat;
+
+$md-primary: (
+    50 : #e6e6e8,
+    100 : #bfc0c6,
+    200 : #9596a1,
+    300 : #6b6c7b,
+    400 : #4b4d5e,
+    500 : #2b2d42,
+    600 : #26283c,
+    700 : #202233,
+    800 : #1a1c2b,
+    900 : #10111d,
+    A100 : #6161ff,
+    A200 : #2e2eff,
+    A400 : #0000fa,
+    A700 : #0000e0,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$md-accent: (
+    50 : #f1f3f5,
+    100 : #dde0e7,
+    200 : #c6ccd7,
+    300 : #afb8c6,
+    400 : #9ea8ba,
+    500 : #8d99ae,
+    600 : #8591a7,
+    700 : #7a869d,
+    800 : #707c94,
+    900 : #5d6b84,
+    A100 : #f2f7ff,
+    A200 : #bfd5ff,
+    A400 : #8cb3ff,
+    A700 : #73a3ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-warn: (
+    50 : #fde5e8,
+    100 : #fabdc5,
+    200 : #f7919e,
+    300 : #f46577,
+    400 : #f14459,
+    500 : #ef233c,
+    600 : #ed1f36,
+    700 : #eb1a2e,
+    800 : #e81527,
+    900 : #e40c1a,
+    A100 : #ffffff,
+    A200 : #ffdbdd,
+    A400 : #ffa8ac,
+    A700 : #ff8f94,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$my-primary: mat.define-palette($md-primary);
+$my-accent: mat.define-palette($md-accent);
+$my-warn: mat.define-palette($md-warn);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+   warn: $my-warn,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+@include mat.all-component-themes($my-theme);

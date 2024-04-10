@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <!-- Replace with logo -->
+    <span>FundToolKit</span> 
+    <span class="spacer"></span>
+
+      @if(!authService.isAuthenticated()) {
+        <button class="mr-8" mat-button aria-label="Example icon-button with heart icon" >
+          <span>Login</span>
+        </button>
+
+        <button class="mr-8" color="accent" mat-flat-button aria-label="Example icon-button with heart icon" >
+          <span>Register</span>
+        </button>
+      } @else {
+        <button class="mr-8" mat-button aria-label="Example icon-button with heart icon" >
+          <span>Profile</span>
+        </button>
+      }
+</mat-toolbar>
