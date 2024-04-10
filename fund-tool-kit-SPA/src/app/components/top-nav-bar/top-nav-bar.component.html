@@ -1,19 +1,29 @@
 <mat-toolbar color="primary">
   <!-- Replace with logo -->
-    <span>FundToolKit</span> 
-    <span class="spacer"></span>
+  <span>FundToolKit</span>
+  <span class="spacer"></span>
+  <!-- Navigation points -->
+  <button class="mr-8" mat-button aria-label="Home Page">
+    <span>Home</span>
+  </button>
+  <button class="mr-8" mat-button aria-label="Expenses Calculator Page">
+    <span>Expenses Calculator</span>
+  </button>
+  <button class="mr-8" mat-button aria-label="About Page">
+    <span>About</span>
+  </button>
+  <span class="spacer"></span>
+  @if(!authService.isAuthenticated()) {
+  <button class="mr-8" mat-button aria-label="User Login Button">
+    <span>Login</span>
+  </button>
 
-      @if(!authService.isAuthenticated()) {
-        <button class="mr-8" mat-button aria-label="Example icon-button with heart icon" >
-          <span>Login</span>
-        </button>
-
-        <button class="mr-8" color="accent" mat-flat-button aria-label="Example icon-button with heart icon" >
-          <span>Register</span>
-        </button>
-      } @else {
-        <button class="mr-8" mat-button aria-label="Example icon-button with heart icon" >
-          <span>Profile</span>
-        </button>
-      }
+  <button class="mr-8" color="accent" mat-flat-button aria-label="User Registration Button">
+    <span>Register</span>
+  </button>
+  } @else {
+  <button class="mr-8" mat-button aria-label="=User Profile Button">
+    <span>Profile</span>
+  </button>
+  }
 </mat-toolbar>
